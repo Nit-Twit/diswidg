@@ -20,9 +20,11 @@ export default function DiscordPage() {
     setPlaceholder("989924991535566879");
   }, []);
 
+  const url = "widgets.nittwit.tech"
+
   useEffect(() => {
     setCode(
-      `https://widgets.nittwit.tech/discord/u?id=${placeholder}&badges=${showBadges}&logo=${showLogo}&global=${showGlobal}&banner=${showBanner}&full_banner=${
+      `https://${url}/discord/u?id=${placeholder}&badges=${showBadges}&logo=${showLogo}&global=${showGlobal}&banner=${showBanner}&full_banner=${
         showFullBanner && showBanner
       }&rounded=${rounded}`
     );

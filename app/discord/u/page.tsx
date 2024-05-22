@@ -73,7 +73,7 @@ export default async function iFrameContent({
             <img
               src={getUserAvatar(user)}
               width={256}
-              className="w-14 rounded-full ml-1"
+              className="w-12 rounded-full ml-2"
             />
             <div className="flex flex-col">
               <Heading>
@@ -90,7 +90,7 @@ export default async function iFrameContent({
           </div>
           <div className="w-1/3 flex flex-col justify-end items-end ">
             {badges ? (
-              <div className="rounded-md flex flex-row flex-1 gap-1 items-end justify-center mr-1">
+              <div className="rounded-md flex flex-row flex-1 gap-1 items-end justify-center mr-2">
                 {userFlags.map((flag) => {
                   return (
                     <img
@@ -102,9 +102,9 @@ export default async function iFrameContent({
                 })}
               </div>
             ) : null}
-            <div className="h-4 mb-1 flex mt-3 flex-col justify-start items-end">
+            <div className="h-4 mb-0 flex mt-3 flex-col justify-start items-end">
               {logo ? (
-                <FaDiscord className="w-6 mr-1 text-[#75797d]" />
+                <FaDiscord className="w-4 mb-1 mr-1 text-[#75797d]" />
               ) : null}
             </div>
           </div>
