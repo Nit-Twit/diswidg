@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+  --background: #424549;
+  --midbg: #3c3f44;
+  --darkerbg: #282b30;
+  --disabled: #2e3034;
+  --blurple: #7289da;
+  --darkblurple: #5668a9;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: transparent;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.middle {
+  transform: translateY(-25%)
+}
+
+.hover-active-bg:checked:hover {
+  background-color: var(--darkblurple);
+}
+
+.hover-active-bg:disabled:hover {
+  background-color: var(--disabled);
+}
+
+
