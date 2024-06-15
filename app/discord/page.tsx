@@ -20,7 +20,10 @@ export default function DiscordPage() {
     setPlaceholder("989924991535566879");
   }, []);
 
-  const url = "widgets.nittwit.tech"
+  const url =
+    process.env.NODE_ENV === "development"
+      ? "3000-nittwit-diswidg-olg72nay3k4.ws-us114.gitpod.io"
+      : "widgets.nittwit.tech";
 
   useEffect(() => {
     setCode(
@@ -154,9 +157,11 @@ export default function DiscordPage() {
         </button>
       </div>
       <div className="fixed right-0">
-        {copied ? <div className="bg-green-500 px-4 py-2 mr-4 mt-4 rounded-md">
-          Copied!
-        </div> : null}
+        {copied ? (
+          <div className="bg-green-500 px-4 py-2 mr-4 mt-4 rounded-md">
+            Copied!
+          </div>
+        ) : null}
       </div>
     </main>
   );

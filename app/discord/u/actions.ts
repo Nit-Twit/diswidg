@@ -3,10 +3,6 @@ export async function APIRequest(route: string) {
         headers: {
             "Authorization": `Bot ${process.env.BOT_TOKEN}`,
             "Accept": "application/json",
-            "Cache-Control": "no-cache",
-        },
-        next: {
-            revalidate: 60
         },
         keepalive: true,
         cache: "no-store"
