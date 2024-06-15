@@ -20,6 +20,9 @@ export default function DiscordPage() {
     setPlaceholder("989924991535566879");
   }, []);
 
+  
+
+
   const url =
     process.env.NODE_ENV === "development"
       ? "3000-nittwit-diswidg-olg72nay3k4.ws-us114.gitpod.io"
