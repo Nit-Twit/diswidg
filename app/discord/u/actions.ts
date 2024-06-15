@@ -1,10 +1,15 @@
 export async function APIRequest(route: string) {
-    const res = await fetch(`https://discord.com/api/v10/${route}`, {
+    const res = await fetch(`https://discord.com/api/v10/${route}?timestamp=${new Date().getTime()}`, {
         headers: {
             "Authorization": `Bot ${process.env.BOT_TOKEN}`,
-            "Accept": "application/json"
+            "Accept": "application/json",
+            "Cache-Control": "no-cache",
         },
-        keepalive: false
+        next: {
+            revalidate: 60
+        },
+        keepalive: true,
+        cache: "no-store"
     });
 
     if (!res.ok) {
